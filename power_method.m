@@ -7,9 +7,8 @@ A=[4 1 0;
 x0=[1; 1; 1;];
 k1=100;
 MAX=100;
-j=1;
 tol=10^-3;
-while j<MAX
+for j=1:MAX
     y=A*x0;
     k=max(abs(y));
     x=y/k;
@@ -18,7 +17,6 @@ while j<MAX
     end
     x0=x;
     k1=k;
-    j=j+1;
 end
 fprintf('Lagest Eigen value\n');
 k

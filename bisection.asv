@@ -5,20 +5,7 @@ f=@(x) x^2-29;
 a=0;
 b=5;
 tol=10^-2;
-if f(a)*f(b)<0
-    disp('Wrong values of a and b');
-else
-    c=(a+b)/2;
-    while abs(f(c))<tol
-        if f(a)*f(c)<0
-            b=c;
-        else
-            a=c;
-        end
-        c=(a+b)/2;
-    end
-    fprintf('Root is %f',c);
-end
+if f(a)*f(b)<
 
 
 
