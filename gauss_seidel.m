@@ -10,8 +10,7 @@ x=[0 0 0];
 tol=10^-3;
 n=3;
 N=100;
-k=1;
-while k<=N
+for k=1:N
     for i=1:n
         sum1=0;
         sum2=0;
@@ -25,12 +24,11 @@ while k<=N
        % x(i)=(b(i)-sum1-sum2)/A(i,i);
          x(i)=(1/A(i,i))*(b(i)-sum1-sum2);
     
-            if norm(x-x0)<tol  
+        if norm(x-x0)<tol  
             break
-            end
+        end
     end
-    k=k+1;
     x0=x;
-    end  
+end  
 disp(x)
 A*(x')

@@ -18,6 +18,6 @@ for j=1:MAX
     x0=x;
     k1=k;
 end
-fprintf('Lagest Eigen value\n');
+fprintf('Lagest Eigen value\n')
 k
 x

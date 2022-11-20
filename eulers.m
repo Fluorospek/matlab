@@ -14,5 +14,6 @@ for i=1:n
     k2=h*f(t(i)+h,y(i)+k1);
     y(i+1)=y(i)+(k1+k2)/2;
 end
+
 y
 t
