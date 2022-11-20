@@ -9,7 +9,7 @@ for i=1:n
     l(i)=1.0;
     for j=1:n
         if (j~=i)
-            l(i)=((p-x(j))*l(i))/(x(i)-x(j));
+            l(i)=((p-x(j))/(x(i)-x(j)))*l(i);
         end
     end
 end
