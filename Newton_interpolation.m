@@ -1,28 +1,30 @@
 clc;
 clear all;
 
-x=[0,0.25,0.5,0.75];
-f=[1,1.64872,2.71828,4.4816];
+x=[1 1.5 2 2.5];
+f=[2.7183 4.817 7.3891 12.1825];
 n=length(x);
 DD=zeros(n);
 DD(:,1)=f;
 for j=2:n
     for i=j:n
-        DD(i,j)=(DD(i,j-1)-DD(i-1,j-1))/(x(i)-x(i-j+1))
-    end
-end
-p=0.43;
-for k=1:n
-    pro(k)=1;
-    for j=1:k-1
-        pro(k)=(p-x(j))*pro(k);
+        DD(i,j)=(DD(i,j-1)-DD(i-1,j-1))/(x(i)-x(i-j+1));
     end
 end
 
-       
- sum1=0;
- 
-    for k=1:n
-        sum1=sum1+pro(k)*DD(k,k);
+DD
+y=2.25;
+
+for i=1:n
+    pro(i)=1;
+    for j=1:i-1
+        pro(i)=(y-x(j))*pro(i);
     end
-    disp(sum1)
+end
+
+sum=0;
+for i=1:n
+    sum=sum+pro(i)*DD(i,i);
+end
+
+sum
