@@ -6,6 +6,7 @@ f=[2.7183 4.817 7.3891 12.1825];
 n=length(x);
 DD=zeros(n);
 DD(:,1)=f;
+DD
 for j=2:n
     for i=j:n
         DD(i,j)=(DD(i,j-1)-DD(i-1,j-1))/(x(i)-x(i-j+1));

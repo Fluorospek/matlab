@@ -1,28 +1,25 @@
 clc;
 clear all;
 
-A=[1,1,0,0;1,2,0,1;0,0,3,3;0,1,2,3];
-x0=[1;1;0;1];
-N=3;
-
-k0=1000;
-tol=0.001;
+A=[4 1 0;
+    1 20 1;
+    0 1 4;];
+x0=[1; 1; 1;];
+k1=100;
+MAX=100;
 j=1;
-while j<=N
+tol=10^-3;
+while j<MAX
     y=A*x0;
     k=max(abs(y));
-    x=(1/k)*y;
-%     if (abs(k-k0)<tol)
-%         break;
-fprintf('largest eigen value is %f',k)
-fprintf('corresponding eigen vector is')
-disp(x)
-   
-        x0=x
-        k0=k;
-        j=j+1;
+    x=y/k;
+    if abs(k1-k)<tol
+        break;
     end
-
-% fprintf('largest eigen value is %f',k)
-% fprintf('corresponding eigen vector is')
-% disp(x)
+    x0=x;
+    k1=k;
+    j=j+1;
+end
+fprintf('Lagest Eigen value\n');
+k
+x
