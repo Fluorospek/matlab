@@ -5,7 +5,7 @@ f=@(x) x^2-29;
 a=0;
 b=5;
 tol=10^-2;
-if f(a)*f(b)<0
+if f(a)*f(b)>0
     disp('Wrong values of a and b');
 else
     c=(a+b)/2;
