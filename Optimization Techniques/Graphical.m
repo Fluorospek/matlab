@@ -1,6 +1,6 @@
 %Graphical Method
-clc
-clear all
+clc;
+clear all;
 syms x;
 syms y;
 %Step 1
@@ -20,7 +20,7 @@ y2=max(0,y2);
 
 y3=(B(3)-A(3,1).*x)./A(3,2);
 y3=max(0,y3);
-plot(x,y1,x,y2,x,y3)
+plot(x,y1,'r',x,y2,'g',x,y3,'b');
 xlabel('Value of x')
 ylabel('Value of y')
 
