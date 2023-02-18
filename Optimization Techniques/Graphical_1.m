@@ -45,10 +45,10 @@ for i=1:size(A,1)
     pt=[pt X];
 end
 end
- ptt=pt'
+ ptt=pt';
 % Phase5: Write all corner points
  allpt=[ptt;corpt];
-X=unique(allpt,'rows');
+X=unique(allpt,'rows')
 %Phase 6:Find the feasible region of
 %-x1+3x2<=10
 %x1+x2<=6

@@ -20,6 +20,7 @@ y2=max(0,y2);
 
 y3=(B(3)-A(3,1).*x)./A(3,2);
 y3=max(0,y3);
+
 plot(x,y1,'r',x,y2,'g',x,y3,'b');
 xlabel('Value of x')
 ylabel('Value of y')
@@ -54,16 +55,16 @@ all_unique
 value = [0;0];
 
 for i = 1:size(A,1)
-               row1 = A(i,:);
-               rhs1 = B(i,:);
-               for j = i+1: size(A,1)
-                               row2 = A(j,:);
-                               rhs2 = B(j,:);
-                               AA = [row1; row2];
-                               BB = [rhs1; rhs2];
-                               XX = AA\BB;
-                               value = [value, XX];
-               end
+    row1 = A(i,:);
+    rhs1 = B(i,:);
+    for j = i+1: size(A,1)
+        row2 = A(j,:);
+        rhs2 = B(j,:);
+        AA = [row1; row2];
+        BB = [rhs1; rhs2];
+        XX = AA\BB;
+        value = [value, XX];
+    end
 end
 points = value';
 disp('All the intersecing points are == > ')
@@ -85,7 +86,7 @@ PT = unique(PT, 'rows');
 % Step 7
 
 for i =1 : size(PT,1)
-                fx (i,:) = sum(PT(i,:).*C);
+    fx (i,:) = sum(PT(i,:).*C);
 end
 vert_fns = [PT, fx];
 vertex = array2table(vert_fns);
