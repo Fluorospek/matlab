@@ -8,7 +8,7 @@ B=[8;3];
 m=size(A,1);
 n=size(A,2);
 
-s_no=nchoosek(n,m);
+s_no=nchoosek(n,m)
 t=nchoosek(1:n,m);
 t  % no. of basic variable pairs
 
