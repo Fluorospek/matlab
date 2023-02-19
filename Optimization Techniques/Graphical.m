@@ -82,6 +82,7 @@ disp(all_points)
 
 PT = constraint(all_points);
 PT = unique(PT, 'rows');
+patch(PT(:,1),PT(:,2),'red');
 
 % Step 7
 
